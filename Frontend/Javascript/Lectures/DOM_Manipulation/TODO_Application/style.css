@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --body-background: rgb(226, 235, 235);
+    --containar-background: rgb(251, 252, 252);
+    --btn-color: rgb(108, 141, 250);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background);
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--containar-background);
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#todoinput {
+    /* 75% of parent width */
+    width: 75%;
+    padding: 12px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+#addtodo {
+    background-color: var(--btn-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
