@@ -1,4 +1,6 @@
+// funcation call
 console.log("Function scope variables");
+// creating a function name fun
         function fun() {
             let x = 20; //local scope variable
             console.log(x);
