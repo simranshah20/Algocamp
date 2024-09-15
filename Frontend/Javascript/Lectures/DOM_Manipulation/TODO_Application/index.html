@@ -12,7 +12,13 @@
         <input type="text" id="todoinput" placeholder="Write your next todo here.....">
         <button id="addtodo">Add Todo</button>
 
-        <ul id="list"></ul>
+        <div>
+            <button class="filterBtn" data-filter="all">All </button>
+            <button class="filterBtn" data-filter="Completed">Completed</button>
+            <button class="filterBtn" data-filter="Pending">Pending</button>
+        </div>
+
+        <ul id="todoList"></ul>
     </div>
    <script src="script.js"></script>
 </body>
