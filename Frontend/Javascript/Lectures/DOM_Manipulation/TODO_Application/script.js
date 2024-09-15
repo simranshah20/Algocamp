@@ -26,7 +26,7 @@ if(value=="all"){
     });
 }else if(value=="pending"){
     todos.todoList.forEach(todo => {
-        if (!todo.isCompleted) {
+        if (todo.isCompleted!=true) {
             appendTodoInHtml(todo);  // Display only pending (not completed) todos
         appendTodoInHtml(todo);
         }
