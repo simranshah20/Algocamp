@@ -6,16 +6,18 @@ import TextInputForm from "./TextInputForm";
 function TextInputFormContainer(){
     // let inputType="password";
     const [inputType,setInputType]=useState("password"); //initial value is password
+    const [value,setValue]=useState("");
 
 
     function hanldleFormSubmit(event){
         event.preventDefault();   //it prevent the default behaviour of submition of form 
-        console.log("Form Submitted");
+        console.log("Form Submitted",value);
      }
  
      function handleTextInputChange(event){
       console.log("Input Text changed");
       console.log(event.target.value); 
+      setValue(event.target.value);
      }
      function handleShowHideClick(){
         console.log("Show/Hide button clicked");
