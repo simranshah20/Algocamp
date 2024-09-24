@@ -19,7 +19,7 @@ function TextInputFormContainer(){
             // setTimeout(()=>{
             //     navigate("/play");
             // },500);
-            navigate("/play"); 
+            navigate(`/play`,{state:{wordSelected:value} });    //assigning the property to state
         }
      }
  
