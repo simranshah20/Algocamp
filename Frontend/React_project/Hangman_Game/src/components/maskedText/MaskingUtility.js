@@ -19,7 +19,8 @@ const result = originalWords.toUpperCase().split('').map(char => {
       return "_";
     }
   })   //['M','_','N','_','O']
-  return result.join('');  //it joins array into string "M_N_O"
+//   return result.join('');  //it joins array into string "M_N_O"/
+return result;
 }
 
 
