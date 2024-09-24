@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import Maskedtext from "../components/maskedText/MaskedText";
+import LetterButtons from "../components/LetterButtons/Lettersbuttons";
 
 function PlayGame(){
 //   const [searchParams]=useSearchParams();
@@ -8,6 +9,7 @@ function PlayGame(){
 //const {text}=useParams();  //fetching the value of text
 
 const  {state}=useLocation();  //destructing state property
+
 // const arr=["hello","world"];
     return(
         <>
@@ -18,6 +20,9 @@ const  {state}=useLocation();  //destructing state property
 
         <Maskedtext text={state.wordSelected} guessedLetters={[]}/>
 
+         <div>
+         <LetterButtons text={state.wordSelected} guessedLetters={[]} onLetterClick={()=>{}}/>
+         </div>
         {/* here to work like href,link work like a tag but it doest not refresh the page while switching to another page */}
     <Link to ='/start' className="text-blue-500">Start  Game Link</Link>
         </>
