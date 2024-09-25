@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextInputForm from "./TextInputForm";
 import { useNavigate } from "react-router-dom";
 
@@ -38,6 +38,23 @@ function TextInputFormContainer(){
         }
         console.log(inputType);
      }
+      
+    //  useEffect(()=>{
+    //     console.log("Component first load");  //not call on updates
+    //  },[]);  //passing empty dependency array
+
+    //  useEffect(()=>{
+    //     console.log("Component first load and update");
+    //  });  //not passing dependency array    
+ 
+    //  useEffect(()=>{
+    //     console.log("Component first load and update value changed");
+    //  },[value]);
+
+    //  useEffect(()=>{
+    //     console.log("Component first load and InputType value changed");
+    //  },[inputType]);
+
      return (
         // calling presentation layer component and returning then
      <TextInputForm 
