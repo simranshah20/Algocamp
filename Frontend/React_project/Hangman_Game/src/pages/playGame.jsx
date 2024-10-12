@@ -37,7 +37,7 @@ function handleLetterClick(letter){
         <>
         <h1>Play Game</h1> 
        {wordList.map((word)=>{
-           return <li key={word.id}>{word.wordValue}</li>
+        //    return <li key={word.id}>{word.wordValue}</li>
        })}
         {word && (  //short cuircuiting
          <>
