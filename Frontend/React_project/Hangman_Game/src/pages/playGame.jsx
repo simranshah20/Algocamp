@@ -1,8 +1,9 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Maskedtext from "../components/maskedText/MaskedText";
 import LetterButtons from "../components/LetterButtons/Lettersbuttons";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import HangMan from "../components/HangMan/HangMan";
+import { WordContext } from "../Context/WordContext";
 
 function PlayGame(){
 //   const [searchParams]=useSearchParams();
@@ -10,14 +11,15 @@ function PlayGame(){
 
 //const {text}=useParams();  //fetching the value of text
 
-const  {state}=useLocation();  //destructing state property
+//const  {state}=useLocation();  //destructing state property
 
+const {word}=useContext(WordContext)
 const [guessedLetters,setGuessedLetters]=useState([]);
 const [step,setStep]=useState(0);
 
 
 function handleLetterClick(letter){
-    if(state?.wordSelected?.toUpperCase().includes(letter)){
+    if(word?.toUpperCase().includes(letter)){
         console.log("Correct");
     }else{
         console.log("Wrong");
@@ -30,15 +32,15 @@ function handleLetterClick(letter){
     return(
         <>
         <h1>Play Game</h1> 
-        {state?.wordSelected && (  //short cuircuiting
+        {word && (  //short cuircuiting
          <>
             {/* rendering list in reacct (on UI(using map()) in list(using key)) */}
            {/* {arr.map((element,index)=><b key={index}>{element}</b>)}    */}
 
-           <Maskedtext text={state.wordSelected} guessedLetters={guessedLetters}/>
+           <Maskedtext text={word} guessedLetters={guessedLetters}/>
 
          <div>
-             <LetterButtons text={state.wordSelected} guessedLetters={guessedLetters} onLetterClick={handleLetterClick}/>
+             <LetterButtons text={word} guessedLetters={guessedLetters} onLetterClick={handleLetterClick}/>
          </div>
 
          <div>

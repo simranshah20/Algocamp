@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Buttons/Button";
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+import { WordContext } from "../Context/WordContext";
 function Home(){
-    const [word,setWord]=useState("");
+
+    //react hook
+    const {setWordList,setWord}=useContext(WordContext);
      
     async function fetchWords(){   //downloading data on first load
         const response = await fetch('http://localhost:3000/words');
         const data=await response.json();   //convet into json and provide javascript in object form
         console.log(data);
+
+        setWordList([...data])    //seting new array and can be accessed anywhere
 
         const randomIndex=Math.floor(Math.random()*data.length);  //fetch random index
         console.log(data[randomIndex]);  
@@ -21,7 +26,7 @@ function Home(){
 
    return(
     <>
-    <Link to='/play' state={{wordSelected:word}}>
+    <Link to='/play'>
        <Button text="Single Player"/>
     </Link>
     <br/>
