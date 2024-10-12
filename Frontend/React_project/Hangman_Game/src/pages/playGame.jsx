@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import Maskedtext from "../components/maskedText/MaskedText";
 import LetterButtons from "../components/LetterButtons/Lettersbuttons";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import HangMan from "../components/HangMan/HangMan";
-import { WordContext } from "../Context/WordContext";
+// import { WordContext } from "../Context/WordContext";
+import useWordStore from "../Stores/WordStore";
 
 function PlayGame(){
 //   const [searchParams]=useSearchParams();
@@ -13,7 +14,10 @@ function PlayGame(){
 
 //const  {state}=useLocation();  //destructing state property
 
-const {word}=useContext(WordContext)
+// const {word} = useContext(WordContext);
+ 
+const { wordList, word} = useWordStore();
+
 const [guessedLetters,setGuessedLetters]=useState([]);
 const [step,setStep]=useState(0);
 
@@ -32,6 +36,9 @@ function handleLetterClick(letter){
     return(
         <>
         <h1>Play Game</h1> 
+       {wordList.map((word)=>{
+           return <li key={word.id}>{word.wordValue}</li>
+       })}
         {word && (  //short cuircuiting
          <>
             {/* rendering list in reacct (on UI(using map()) in list(using key)) */}
@@ -45,7 +52,7 @@ function handleLetterClick(letter){
 
          <div>
           <HangMan step={step}/>
-        </div>   
+        </div>    
          </>
     )} 
         
@@ -56,4 +63,4 @@ function handleLetterClick(letter){
         </>
     );
 }
-export default PlayGame
+export default PlayGame;
