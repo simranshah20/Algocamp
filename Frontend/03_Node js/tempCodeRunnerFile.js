@@ -1,7 +1,5 @@
-//NOTE: when ues add "type":"module" in pakage.json then we do not need to use .mjs file extension to every single file
-
 // Function to perform a linear search on an array
-export function linearSearch(arr, val) {
+function linearSearch(arr, val) {
     // Loop through each element in the array
     for (var i = 0; i < arr.length; i++) {
         // Check if the current element is equal to the value we're searching for
@@ -15,7 +13,7 @@ export function linearSearch(arr, val) {
 }
 
 // Function to perform a binary search on a sorted array
-export function binarySearch(arr, val) {
+function binarySearch(arr, val) {
     // Initialize left and right pointers for the search range
     let left = 0;
     let right = arr.length - 1;
@@ -43,3 +41,10 @@ export function binarySearch(arr, val) {
     // If the value is not found, return -1
     return -1;
 }
+
+// Exporting the functions for use in other files
+// Uncomment the next line to export only the linearSearch function
+// module.exports = linearSearch;
+
+// Exporting both functions as an object for use in other files
+module.exports = { linearSearch, binarySearch };

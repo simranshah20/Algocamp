@@ -1,5 +1,3 @@
-//NOTE: when ues add "type":"module" in pakage.json then we do not need to use .mjs file extension to every single file
-
 // Function to perform a linear search on an array
 export function linearSearch(arr, val) {
     // Loop through each element in the array
@@ -43,3 +41,4 @@ export function binarySearch(arr, val) {
     // If the value is not found, return -1
     return -1;
 }
+
