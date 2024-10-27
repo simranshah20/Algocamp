@@ -14,3 +14,4 @@ console.log(Searching);
 // Using the binarySearch function from the Searching object to search for the value 15 in the array [10, 15, 20, 25, 30]
 // The expected output is -1, which indicates that the value 15 was not found (this is likely due to a logical error in the binary search implementation)
 console.log(Searching.binarySearch([10,15,20,25,30],15));    // Output -1
+
