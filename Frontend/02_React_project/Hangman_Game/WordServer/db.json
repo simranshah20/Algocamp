@@ -1,0 +1,80 @@
+{
+    "words":[
+        {
+            "wordValue":"Mango",
+            "wordHint":"A fruit"
+        },
+        {
+            "wordValue":"Banana",
+            "wordHint":"A fruit"
+        },
+        {
+            "wordValue":"Nepal",
+            "wordHint":"A country"
+        },
+        {
+            "wordValue":"Kathmandu",
+            "wordHint":"A city"
+        },
+        {
+            "wordValue":"Apple",
+            "wordHint":"A fruit"
+        },
+        {
+            "wordValue":"India",
+            "wordHint":"A country"
+        },
+        {
+            "wordValue":"Delhi",
+            "wordHint":"A city"
+        },
+        {
+            "wordValue":"Orange",
+            "wordHint":"A fruit"
+        },
+        {
+            "wordValue":"China",
+            "wordHint":"A country"
+        },
+        {
+            "wordValue":"Beijing",
+            "wordHint":"A city"
+        },
+        {
+            "wordValue":"Pine",
+            "wordHint":"Evergreen tree"
+        },
+        {
+            "wordValue":"Tokyo",
+            "wordHint":"Capital city"
+        },
+        {
+            "wordValue":"Grapes",
+            "wordHint":"Fruit often used in wine"
+        },
+        {
+            "wordValue":"Paris",
+            "wordHint":"Romantic city"
+        },
+        {
+            "wordValue":"Lemon",
+            "wordHint":"Sour citrus fruit"
+        },
+        {
+            "wordValue":"Rome",
+            "wordHint":"Ancient city"
+        },
+        {
+            "wordValue":"Peach",
+            "wordHint":"Sweet summer fruit"
+        },
+        {
+            "wordValue":"Sydney",
+            "wordHint":"City with iconic opera house"
+        },
+        {
+            "wordValue":"Cherry",
+            "wordHint":"Small, round fruit"
+        }
+    ]
+}
